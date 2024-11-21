@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Real-Time Air Quality Monitoring</title>
 
-    <!-- Link to external CSS -->
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
     <link rel="stylesheet" href="styles.css" />
-
     <!-- FontAwesome for Satellite Icon -->
     <link
       rel="stylesheet"
@@ -21,7 +24,7 @@
       <!-- Map Section -->
       <div id="map"></div>
 
-      <!-- Buttons for GO, END, and RESET -->
+      <!-- Tombol GO, END, dan RESET -->
       <div class="button-container">
         <button class="go-button" onclick="onGoButtonClick()">GO</button>
         <button class="end-button" onclick="onEndButtonClick()">END</button>
@@ -30,13 +33,13 @@
         </button>
       </div>
 
-      <!-- Satellite Button -->
+      <!-- Tombol Satelit -->
       <button class="satellite-button" onclick="toggleSatellite()">
         Satelit
       </button>
     </div>
 
-    <!-- Link to external JS -->
+    <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="scripts.js"></script>
   </body>
