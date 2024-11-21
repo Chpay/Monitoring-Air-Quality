@@ -5,20 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Real-Time Air Quality Monitoring</title>
 
-    <!-- Leaflet CSS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    />
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles.css" />
 
     <!-- FontAwesome for Satellite Icon -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-
-    <!-- External CSS -->
-    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="container">
@@ -27,7 +21,7 @@
       <!-- Map Section -->
       <div id="map"></div>
 
-      <!-- Tombol GO, END, dan RESET -->
+      <!-- Buttons for GO, END, and RESET -->
       <div class="button-container">
         <button class="go-button" onclick="onGoButtonClick()">GO</button>
         <button class="end-button" onclick="onEndButtonClick()">END</button>
@@ -36,16 +30,14 @@
         </button>
       </div>
 
-      <!-- Tombol Satelit -->
+      <!-- Satellite Button -->
       <button class="satellite-button" onclick="toggleSatellite()">
         Satelit
       </button>
     </div>
 
-    <!-- Leaflet JS -->
+    <!-- Link to external JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-    <!-- External JavaScript -->
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
   </body>
 </html>
