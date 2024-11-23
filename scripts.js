@@ -116,8 +116,8 @@ async function fetchThingSpeakData() {
                     <b>Heat Index:</b> ${historyData.heatIndex.toFixed(
                       2
                     )} °C<br>
-                    <b>Air Quality (MQ7):</b> ${historyData.mq7.toFixed(2)}<br>
-                    <b>Air Quality (MQ135):</b> ${historyData.mq135.toFixed(2)}
+                    <b>Kadar CO:</b> ${historyData.mq7.toFixed(2)} ppm<br>
+                    <b>Kadar CO2:</b> ${historyData.mq135.toFixed(2)} ppm
                   `;
               checkpoint.bindPopup(historyPopup).openPopup(); // Menampilkan pop-up saat kursor mendekati checkpoint
             }
