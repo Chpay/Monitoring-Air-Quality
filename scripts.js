@@ -79,8 +79,8 @@ async function fetchThingSpeakData() {
         // Membuat pop-up kecil di atas marker dengan data heat index dan air quality
         const popupContent = `
               <b>Heat Index:</b> ${heatIndex.toFixed(2)} °C<br>
-              <b>Air Quality (MQ7):</b> ${mq7.toFixed(2)}<br>
-              <b>Air Quality (MQ135):</b> ${mq135.toFixed(2)}
+              <b>Kadar CO:</b> ${mq7.toFixed(2)}<br>
+              <b>Kadar CO2:</b> ${mq135.toFixed(2)}
             `;
         marker.bindPopup(popupContent).openPopup(); // Tampilkan pop-up
 
