@@ -59,8 +59,8 @@
         const data = await response.json();
 
         // Mengupdate lokasi marker dan peta
-        const lat = data.field1; // Data latitude
-        const lng = data.field2; // Data longitude
+        const lat = data.field7; // Data latitude
+        const lng = data.field8; // Data longitude
         marker.setLatLng([lat, lng]); // Update lokasi marker
         map.setView([lat, lng], 17); // Peta akan mengikuti marker
 
