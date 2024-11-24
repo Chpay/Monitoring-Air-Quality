@@ -53,14 +53,14 @@
       // Fungsi untuk mendapatkan data dari ThingSpeak
       async function fetchThingSpeakData() {
         const channelID = 2684072; // ID Channel ThingSpeak
-        const readAPIKey = "66QV45REC75N6YA3"; // API Key untuk membaca data
+        const readAPIKey = "XXQ2EY2EFZ47UJ1S"; // API Key untuk membaca data
         const url = `https://api.thingspeak.com/channels/${channelID}/feeds/last.json?api_key=${readAPIKey}`;
         const response = await fetch(url);
         const data = await response.json();
 
         // Mengupdate lokasi marker dan peta
-        const lat = data.field7; // Data latitude
-        const lng = data.field8; // Data longitude
+        const lat = data.field1; // Data latitude
+        const lng = data.field2; // Data longitude
         marker.setLatLng([lat, lng]); // Update lokasi marker
         map.setView([lat, lng], 17); // Peta akan mengikuti marker
 
