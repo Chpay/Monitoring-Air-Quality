@@ -53,7 +53,7 @@
       // Fungsi untuk mendapatkan data dari ThingSpeak
       async function fetchThingSpeakData() {
         const channelID = 2684072; // ID Channel ThingSpeak
-        const readAPIKey = "XXQ2EY2EFZ47UJ1S"; // API Key untuk membaca data
+        const readAPIKey = "66QV45REC75N6YA3"; // API Key untuk membaca data
         const url = `https://api.thingspeak.com/channels/${channelID}/feeds/last.json?api_key=${readAPIKey}`;
         const response = await fetch(url);
         const data = await response.json();
