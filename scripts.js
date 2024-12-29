@@ -80,8 +80,8 @@
               const popupContent = `
               <b>Temperature:</b> ${temperature.toFixed(2)} °C<br>
               <b>Kelembaban:</b> ${humidity.toFixed(2)} %<br>
-              <b>Kadar CO:</b> ${mq7.toFixed(2)}<br>
-              <b>Kadar CO2:</b> ${mq135.toFixed(2)}
+              <b>Kadar CO:</b> ${mq7.toFixed(2)} ppm<br>
+              <b>Kadar CO2:</b> ${mq135.toFixed(2)} ppm
             `;
               marker.bindPopup(popupContent).openPopup(); // Tampilkan pop-up
 
@@ -120,8 +120,8 @@
                     <b>Kelembaban:</b> ${historyData.humidity.toFixed(
                       2
                     )} %<br>
-                    <b>Kadar CO:</b> ${historyData.mq7.toFixed(2)}<br>
-                    <b>Kadar CO2:</b> ${historyData.mq135.toFixed(2)}
+                    <b>Kadar CO:</b> ${historyData.mq7.toFixed(2)} ppm<br>
+                    <b>Kadar CO2:</b> ${historyData.mq135.toFixed(2)} ppm
                   `;
                     checkpoint.bindPopup(historyPopup).openPopup(); // Menampilkan pop-up saat kursor mendekati checkpoint
                   }
