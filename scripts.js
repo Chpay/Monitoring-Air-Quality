@@ -78,9 +78,10 @@
 
               // Membuat pop-up kecil di atas marker dengan data heat index dan air quality
               const popupContent = `
-              <b>Heat Index:</b> ${heatIndex.toFixed(2)} °C<br>
-              <b>Air Quality (MQ7):</b> ${mq7.toFixed(2)}<br>
-              <b>Air Quality (MQ135):</b> ${mq135.toFixed(2)}
+              <b>Temperature:</b> ${temperature.toFixed(2)} °C<br>
+              <b>Kelembaban:</b> ${humidity.toFixed(2)} %<br>
+              <b>Kadar CO:</b> ${mq7.toFixed(2)}<br>
+              <b>Kadar CO2:</b> ${mq135.toFixed(2)}
             `;
               marker.bindPopup(popupContent).openPopup(); // Tampilkan pop-up
 
@@ -104,7 +105,7 @@
                 }).addTo(map);
 
                 // Simpan checkpoint ke history
-                checkpointHistory.push({ checkpoint, heatIndex, mq7, mq135 });
+                checkpointHistory.push({ checkpoint, temperature, humidity, mq7, mq135 });
 
                 // Tambahkan event mouseover untuk menampilkan pop-up pada checkpoint
                 checkpoint.on("mouseover", function () {
@@ -113,11 +114,14 @@
                   );
                   if (historyData) {
                     const historyPopup = `
-                    <b>Heat Index:</b> ${historyData.heatIndex.toFixed(
+                    <b>Temperature:</b> ${historyData.temperature.toFixed(
                       2
                     )} °C<br>
-                    <b>Air Quality (MQ7):</b> ${historyData.mq7.toFixed(2)}<br>
-                    <b>Air Quality (MQ135):</b> ${historyData.mq135.toFixed(2)}
+                    <b>Kelembaban:</b> ${historyData.humidity.toFixed(
+                      2
+                    )} %<br>
+                    <b>Kadar CO:</b> ${historyData.mq7.toFixed(2)}<br>
+                    <b>Kadar CO2:</b> ${historyData.mq135.toFixed(2)}
                   `;
                     checkpoint.bindPopup(historyPopup).openPopup(); // Menampilkan pop-up saat kursor mendekati checkpoint
                   }
